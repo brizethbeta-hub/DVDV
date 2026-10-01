@@ -1,0 +1,35 @@
+flowchart TD
+    %% Nodos Iniciales
+    A([Inicio / Landing Page]) --> B[Aviso de Privacidad e Información del Proyecto]
+    
+    %% Decisión de Privacidad
+    B --> C{¿Acepta Política de Datos?}
+    C -- No --> D[Pantalla de Salida / Agradecimiento sin Registro]
+    C -- Sí --> E[MÓDULO 1: Bienvenida e Identificación]
+
+    %% Módulo 1
+    E --> F[Selección de Sector y Etapa de Startup]
+    F --> G[Carga Rápida de Datos: Runway y Caja]
+
+    %% Módulo 2
+    G --> H[MÓDULO 2: Panel Interactivo y Simulación]
+    H --> I[Selección de Escenario Macroeconómico Local]
+    I --> J[Procesamiento Transparente de Datos]
+
+    %% Módulo 3
+    J --> K[MÓDULO 3: Visualizador de Resultados / Dashboard]
+    K --> L[Proyección de Escenarios: Optimista, Moderado, Crítico]
+    K --> M[Recomendación Priorizada de Toma de Decisiones]
+    K --> N{¿Desea Exportar Resultados?}
+    
+    N -- Sí --> O[Descarga / Envío por Email de Reporte PDF]
+    N -- No / Continúa --> P[MÓDULO 4: Evaluación y Soporte]
+    O --> P
+
+    %% Módulo 4 y Salida
+    P --> Q[Micro-Formulario CSAT / Feedback de Usabilidad]
+    P --> R[Canal de Soporte / Consideraciones Éticas]
+    Q --> S{¿Desea Simular Nuevo Escenario?}
+    
+    S -- Sí --> H
+    S -- No --> T([Fin de la Experiencia / Retorno al Inicio])
